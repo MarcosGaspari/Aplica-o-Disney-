@@ -1,10 +1,11 @@
 html{
     background-image: url("../IMG/Principal.jpg");
+    background-repeat: no-repeat;
 }
 header {
     display: flex;
     width: 100%;
-    height: 85px;
+    height: 65px;
     justify-content: flex-end;
 }
 main {
@@ -19,7 +20,7 @@ main {
 .lateral1{
     display: flex;
     width: 48%;
-    height: 200px;
+    height: 160px;
     margin: 15px;
 }
 .lateral3 img{
@@ -29,18 +30,18 @@ main {
 }
 .lateral4 {
     max-width: 45%;
-    max-height: 150px;
-    margin: 55px 20px;
+    max-height: 50px;
+    margin-top: 65px;
+    margin-left: 15px;
 }
-footer {
-    width: 50%;
-    height: 60px;
-    margin: 10px;
-    background-color: limes;
+footer img{
+    width: 40%;
+    height: 25px;
+    margin: 35px;
 }
 .box1  {
     width: 50%;
-    min-height: 220px;
+    min-height: 200px;
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -117,37 +118,131 @@ body .btn2:hover{
     background-color: white;
     color: black;
 }
-@media screen and (max-width: 768px){
-    html {background-image: url(../IMG/WEB768.jpg); background-repeat: no-repeat;}
-    header {height: 120px; }
-    .btn2 {padding: 0px; border: none;}
-    .box2 {width: 60px;}
-    .lateral3 { max-width: 100%; max-height: 100px; text-align: center; margin-left: 0px;margin-top: 150px;}
-    .texto { height: 43px; width: 100%; margin-left: 0px;}
-    h1{ font-size: 23px; text-align: center;line-height: 20px; margin: 0px;}
-    .lateral1 { flex-direction: column; margin: 0px; width: 100%; height: 260px;}
-    .box1 {min-height: 50px; width: 100%; text-align: center; margin: 0px; justify-content:initial; background-color: rgb(1, 1, 24);}
-    .btn1 {height: 45px; width: 40%; text-align: center; align-items: center;}
-    h3 {font-size: 25px;margin: 20px;}
-    footer {display: none;}
-    .lateral4 {height: 50px; max-width: 100%; margin: 0px;padding: 20px; background-color: rgb(1, 1, 24);}
-    h4 {line-height: 10px; text-align: center; color: lightgrey; font-size: 9px;margin: 0px; background-color: rgb(1, 1, 24);  }
-
+@media screen and (max-width: 1024px){
+        
 }
-@media (max-width: 360px){
-    html {background-image: url(../IMG/WebDesign.jpg); background-repeat: no-repeat;}
-    header {height: 120px; }
-    .btn2 {padding: 0px; border: none;}
-    .box2 {width: 60px;}
-    .lateral3 { max-width: 100%; max-height: 100px; text-align: center; margin-left: 0px;margin-top: 65px; background-color: rgb(1, 1, 24);}
-    .texto { height: 43px; width: 100%; margin-left: 0px; background-color: rgb(1, 1, 24); }
-    h1{ font-size: 20px; text-align: center;line-height: 20px; margin: 0px; background-color: rgb(1, 1, 24);}
-    .lateral1 { flex-direction: column; margin: 0px; width: 100%; height: 260px; background-color: rgb(1, 1, 24); }
-    .box1 {height: 100px; width: 100%; text-align: center; margin: 0px; background-color: rgb(1, 1, 24);}
-    .btn1 {height: 45px; width: 90%;}
-    h3 {font-size: 25px;}
-    footer {display: none;}
-    .lateral4 {height: 50px; max-width: 100%; margin: 0px; background-color: rgb(1, 1, 24);}
-    h4 {line-height: 10px; text-align: center; color: lightgrey; font-size: 9px;margin: 0px; background-color: rgb(1, 1, 24);  }
 
+@media screen and (max-width: 768px){
+    html {  background-image: url(../IMG/WEB768.jpg);
+            background-repeat: no-repeat;
+         }
+    header {height: 120px; }
+
+    .btn2 {padding: 0px; border: none;}
+
+    .box2 {width: 60px;}
+
+    .lateral3 { max-width: 100%;
+                max-height: 100px; 
+                text-align: center; 
+                margin-left: 0px;
+                margin-top: 150px;
+            }
+    .texto { height: 43px; 
+             width: 100%;
+             margin-left: 0px;
+            }
+    h1{ font-size: 23px;
+        text-align: center;
+        line-height: 20px;
+        margin: 0px;
+        }
+    .lateral1 { flex-direction: column;
+                margin: 0px;
+                width: 100%;
+                height: 260px;
+            }
+    .box1 { min-height: 50px;
+            width: 100%;
+            margin: 0px;
+            justify-content:initial;
+            background-color: rgb(1, 1, 24);
+        }
+    .btn1 { height: 45px;
+            width: 100%;
+            text-align: center;
+        }
+    h3 {    font-size: 25px;
+            margin: 10px;
+            text-align: center;
+        }
+    footer {display: none;}
+
+    .lateral4 { height: 50px; 
+                max-width: 100%;
+                margin: 0px;
+                padding: 20px;
+                background-color: rgb(1, 1, 24);
+            }
+    h4 {    line-height: 10px;
+            text-align: center;
+            color: lightgrey;
+            font-size: 9px;
+            margin: 0px;
+            background-color: rgb(1, 1, 24);
+        }
+}
+@media screen and (max-width: 425px){
+    html{  background-image: url(../IMG/WEB425.jpg);
+            background-repeat: no-repeat;
+        }
+    header {height: 120px; }
+  
+    .btn2 { padding: 0px;
+            border: none;
+        }
+    .box2 {width: 60px;}
+
+    .lateral3 { max-width: 100%;
+                max-height: 100px;
+                text-align: center;
+                margin-left: 0px;
+                margin-top: 20px;
+            }
+    .texto {    height: 35px;
+                width: 100%;
+                margin-left: 0px;
+                background-color: rgb(1, 1, 24);
+            }
+    h1{ font-size: 19px;
+        text-align: center;
+        line-height: 20px;
+        margin: 0px;
+        background-color: rgb(1, 1, 24);
+    }
+    .lateral1 { flex-direction: column;
+                margin: 0px;
+                width: 100%;
+                height: 260px;
+            }
+    .box1 { min-height: 50px;
+            width: 100%;
+            text-align: center;
+            margin: 0px;
+            justify-content:initial;
+            background-color: rgb(1, 1, 24);
+        }
+    .btn1 { height: 45px;
+            width: 100%;
+            text-align: center;
+            align-items: center;
+        }
+    h3 {    font-size: 25px;
+            margin: 10px;
+        }
+    footer {display: none;}
+
+    .lateral4 { height: 50px;
+                max-width: 100%;
+                margin: 0px;
+                padding: 20px;
+                background-color: rgb(1, 1, 24);
+            }
+    h4 {    line-height: 10px;
+            text-align: center;
+            color: lightgrey;
+            font-size: 9px;
+            margin: 0px;
+            background-color: rgb(1, 1, 24);  
+        }
 }
