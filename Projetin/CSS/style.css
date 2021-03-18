@@ -118,8 +118,23 @@ body .btn2:hover{
     background-color: white;
     color: black;
 }
-@media screen and (max-width: 1024px){
-        
+@media screen and (max-width: 1218px){ 
+    .box1 {min-height: 150px;}
+
+    h3{font-size: 26px; line-height: 3px;}
+
+    .texto{ height: 90px;}
+    
+    h1 {font-size: 30px; }
+
+    .lateral1 {width: 50%;}
+
+    .box1 {min-height: 230px;}
+
+    h4 {margin-top: 110px;
+        line-height: 10px;
+    }
+
 }
 
 @media screen and (max-width: 768px){
@@ -128,7 +143,10 @@ body .btn2:hover{
          }
     header {height: 120px; }
 
-    .btn2 {padding: 0px; border: none;}
+    .btn2 { padding: 0px; 
+            border: none;
+            background-color: transparent;
+        }
 
     .box2 {width: 60px;}
 
@@ -156,11 +174,12 @@ body .btn2:hover{
             width: 100%;
             margin: 0px;
             justify-content:initial;
+            text-align: center;
+            align-items: center;
             background-color: rgb(1, 1, 24);
         }
     .btn1 { height: 45px;
-            width: 100%;
-            text-align: center;
+            width: 50%;
         }
     h3 {    font-size: 25px;
             margin: 10px;
@@ -190,6 +209,7 @@ body .btn2:hover{
   
     .btn2 { padding: 0px;
             border: none;
+            background-color: transparent;
         }
     .box2 {width: 60px;}
 
@@ -220,10 +240,11 @@ body .btn2:hover{
             text-align: center;
             margin: 0px;
             justify-content:initial;
+            align-items: center;
             background-color: rgb(1, 1, 24);
         }
-    .btn1 { height: 45px;
-            width: 100%;
+    .btn1 { height: 35px;
+            width: 50%;
             text-align: center;
             align-items: center;
         }
