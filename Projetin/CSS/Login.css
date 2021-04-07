@@ -71,3 +71,10 @@ a{
     font-size: 15px; 
     text-decoration: none;
 }
+input:invalid {
+    border: 2px solid rgb(163, 12, 12);
+  }
+  
+  input:valid {
+    border: 2px solid black;
+  }

@@ -13,25 +13,34 @@
             </div>
             <h3>Use o seu e-mail para entrar</h3>
             <div class="texto">
-                <input type="text" value="E-mail" onfocus="this.value='';" />
-                <br>
-                <div class="dialog">
-                    <p>Endereço de e-mail inválido. Digite um e-mail válido neste formato: seunome@exemplo.com. </p>
-                </div>
-                <br>
-                <button class="btn">
-                    <h4>continuar</h4>
-                </button>
-                <br>
+                    <input id="start" type="email" name = "E-mail" maxlength="50" minlength="5" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  size="30" 
+                    placeholder="E-mail">
+                    <br>
+                    <div class="dialog">
+                        <p>Endereço de e-mail inválido. Digite um e-mail válido neste formato: seunome@exemplo.com. </p>
+                    </div>
+                    <br>
+                    <button class="btn">
+                        <h4>continuar</h4>
+                    </button>
+                    <P>Não tem Disney+? <a href="cadastro.html">Assine</a></P>
+
             </div>
         </div>
+
         <script type="text/javascript"charset= "utf-8">
-        
             var input = document.querySelector('input'),
-                button = document.querySelector('button');
-                dialog = document.querySelector ('.dialog')
+                button = document.querySelector('button'),
+                dialog = document.querySelector ('.dialog');
                 button.addEventListener ('click', function () {
-                    dialog.className = 'dialog show';
+
+                    if (input.validity.valid == false){
+                        if (dialog.className === 'dialog'){
+                        dialog.className = 'dialog show';
+                        }else{ 
+                        dialog.className = 'dialog';
+                        }
+                    }
                 }); 
                 
         </script>
