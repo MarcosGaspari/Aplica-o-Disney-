@@ -18,28 +18,19 @@
             placeholder="E-mail">
             <br>
             <br>
-            <input type="submit" value = "continuar" name="submit" >
-            <p>Não tem Disney+? <a href="cadastro.html">Assine</a></p>
+            <input id="botão" type="button" value = "continuar" >
+            <p>Não tem Disney+? <a href="cadastroEmail.html">Assine</a></p>
         </div>   
-           
-
         <script type="text/javascript"charset= "utf-8">
-            var input = document.querySelector('input'),
-                dialog = document.querySelector ('.dialog');
-                input.addEventListener ('click', function () {
-                     
-                            if (input.validity.valid == false){
-                                if (dialog.className === 'dialog'){
-                                dialog.className = 'dialog show';
-                                }else{ 
-                                dialog.className = 'dialog';
-                                }
-                            }
-                            if (input.validity.valid == true){
-                  
+            var input = document.querySelector('input');
+            document.getElementById('botão').addEventListener('click', function() {
+                    if (input.validity.valid == true){
+                        window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/LoginSenha.html');
+                    }else{
+                        document.getElementById('start').focus();
+
                     }
-                }); 
-                
+            });
         </script>
     </body>
 </html>

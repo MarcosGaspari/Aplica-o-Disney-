@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LoginDisney+ </title>
+        <link rel="stylesheet" href="css/cadastro.css"/>
+    </head>
+    <body>
+        <header >
+                <a class="btn" href="LoginEmail.html">Entrar</a>
+        </header>
+        <div class="imagemm">
+            <div class="Imagem">
+                <img src="IMG/disney-plus-logo-1.png">
+            </div>
+        </div>
+        <div class="inicio1">
+            <p style="text-transform: uppercase;">Passo 1 de 2</p>
+            <h3>Digite o seu e-mail</h3>
+                <input id="start" type="email" name = "E-mail"  maxlength="50" minlength="5" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required 
+                placeholder=" E-mail">
+                <br>
+                <div class="erro">
+                    <p>erro</p>
+                </div>
+                <br>
+                <input type="checkbox" name="checkbox" > <p style="display: inline; font-size: 12px;">Sim! Quero receber notícias, ofertas especiais e outras informações do Disney+ e das empresas do grupo Walt Disney.</p>
+                <br>
+                <br>
+                <div class="fundo">
+                    <p style="font-size: 12px;">A Disney usará os seus dados para oferecer e dar suporte aos serviços, 
+                        personalizar e melhorar a sua experiência no Disney+ e para enviar informações.
+                        Você pode alterar as preferências de comunicação quando quiser.
+                        Podemos usar esses dados conforme explica a nossa politica de privacidade, 
+                        inclusive compartilhá-los com as Empresas do grupo Walt Disney. Ao clicar em "Continuar",
+                        você confirma que leu a nossa Politica de Privacidade e os termos específicos aplicáveis ao Brasil.</p>
+            
+                    <input id="botão" type="button" value = "continuar" >
+                </div>
+        </div>
+            <script type="text/javascript"charset= "utf-8">
+                var input = document.querySelector('input');
+                document.getElementById('botão').addEventListener('click', function() {
+                    if (input.validity.valid == true){
+                        window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/cadastroSenha.html');
+                    }else{
+                        erro.className = 'erro.show';
+                        document.getElementById('start').focus();
+                    }
+                });
+            </script>
+    </body>
+</html>

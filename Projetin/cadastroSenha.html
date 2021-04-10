@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LoginDisney+ </title>
+        <link rel="stylesheet" href="css/cadastro.css"/>
+    </head>
+    <body>
+        <br>
+        <br>
+        <div class="imagemm">
+            <div class="Imagem">
+                <img src="IMG/disney-plus-logo-1.png">
+            </div>
+        </div>
+        <div class="inicio1">
+            <p style="text-transform: uppercase;">Passo 2 de 2</p>
+            <h3>Crie uma senha</h3>
+            <input id="senha" type="password"  maxlength="10" minlength="4" required placeholder=" Senha">
+                <br>
+                <br>
+            <input id="botão" type="button" value = "continuar" >
+        </div>
+            <script type="text/javascript"charset= "utf-8">
+            debugger;
+                var input = document.querySelector('input');
+                document.getElementById('botão').addEventListener('click', function(){
+                    if (input.validity.valid == true){
+                        window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/Principal.html');
+                    }else{
+                        document.getElementById('senha').focus();
+                    }
+                });
+            </script>
+    </body>
+</html>
