@@ -16,9 +16,11 @@
         </div>
         <div class="inicio1">
             <h3>Digite a senha</h3>
-            <input id="senha" type="password" name = "password"  maxlength="50" minlength="4" required 
+            <input id="senha" type="password" name = "password"  maxlength="50" minlength="4" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}" required 
             placeholder=" Senha">
             <br>
+            <div id="certo" class="normal">Use no mínimo quatro caracteres e no máximo dez, com pelo menos um número, uma letra maiúscula e uma letra minúscula.</div>
+            <div id="erro" class="erro">A senha deve ter pelo menos quatro caracteres e no máximo dez, incluindo pelo menos um número, uma letra maiúscula e uma letra minúscula.</div>
             <br>
             <input id="botão" type="button" value = "continuar">
         </div>
@@ -28,6 +30,8 @@
                     if (input.validity.valid == true){
                         window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/Principal.html');
                     }else{
+                        document.getElementById("certo").style.display = 'none';
+                        document.getElementById("erro").style.display = 'block';
                         document.getElementById('senha').focus();
                     }
                 });

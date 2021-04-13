@@ -4,7 +4,7 @@ html{
 header {
     display: flex;
     width: 100%;
-    height: 40px;
+    height: 20px;
     justify-content: flex-end;
     
 }
@@ -95,9 +95,18 @@ input[type = "password"]{
 }
 .erro{
     width: 100%;
+    display: none;
+    color: rgb(255, 85, 76);
+    margin-top: 5px;
+    font-size: 11px;
+    font-family: Avenir-Roman,sans-serif;
+}
+.normal
+{
+    width: 100%;
     display: block;
+    color:white;
+    margin-top: 5px; 
+    font-size: 11px;
+    font-family: Avenir-Roman,sans-serif;
 }
-.erro.show{
-    display: inline;
-}
-
