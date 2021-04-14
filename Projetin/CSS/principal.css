@@ -1,28 +1,58 @@
 html{
     background-color:#151420;
 }
+.imagemm{
+    width: 90%;
+    height: 110px;
+}
+.Imagem img{
+    width: 12%;
+    height: 85px;
+}
+input{
+    background-color: rgb(75, 78, 90);
+    color: rgb(249, 249, 249);
+    font-family: Avenir-Heavy;
+    font-size: 24px;
+    width: 40%;
+    height: 45px;
+    border-radius: 10px 0px 0px 10px;
+    border: transparent;
+    margin-left: 20px;
+}
+button{
+    color: white;
+    font-size: 24px;
+    background-color:royalblue;
+    width: 10%;
+    height: 46px;
+    border: transparent;
+    border-radius: 0px 10px 10px 0px;
+    padding:0%;
+    margin-left: -4px;
+}
 img {
     width: 300px;
-    border-bottom-style: solid;
+    height: 300px;
+    margin: 15px;
 }
-.Herois{
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-between;
-    color: white;
-}
- 
-.personagem{
-    width: 300px;
+.Geral{
+    display:flex;
+    flex-flow:column;
+    flex-flow: row nowrap;
     margin: 20px;
-    border-style: solid;
-    text-align: center;
+}
+.Personagem{
+    color: white;
+    display: flex;
+    margin: 10px;
 }
 .erro{
     width: 100%;
     display: none;
     color: rgb(255, 85, 76);
-    margin-top: 5px;
-    font-size: 11px;
-    font-family: Avenir-Roman,sans-serif;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 24px;
+    font-family: Avenir-Heavy;
 }

@@ -7,14 +7,19 @@
         <link rel="stylesheet" href="css/principal.css"/>
     </head>
     <body>
-        <input type="text" value="">
+        <div class="imagemm">
+            <div class="Imagem">
+                <img src="IMG/disney-plus-logo-1.png">
+            </div>
+        </div>
+        <input type="text" value="" placeholder="Pesquise por personagem" >
         <button id="botão">Buscar</button>
         <div id="erro" class="erro">Nenhum Resultado Encontrado.</div>
-        
-        <ul class="Herois"></ul>
-
+        <div class="Geral">
+            <div class="Personagem"></div>
+        </div>
         <script type="text/javascript"charset= "utf-8">
-            var container = document.querySelector ('ul'),
+            var Personagem = document.querySelector('.Personagem'),
             input = document.querySelector('input');
             const timeStamp = '1618243974';
             const apiKey = 'cd50d89c84a9a1f4b7f6c6bf6ec03977';
@@ -26,7 +31,7 @@
                 elementos = jsonParsed.data.count; 
      
                 document.getElementById('botão').addEventListener('click', function(){
-                    container.innerHTML = '';
+                    Personagem.innerHTML = ''; 
                     document.getElementById("erro").style.display = 'none';
     
                     let contador = 0;
@@ -39,8 +44,8 @@
                                 const li = document.createElement('li');
                                 img.src = jsonParsed.data.results[i].thumbnail.path+'.'+jsonParsed.data.results[i].thumbnail.extension
                                 li.innerHTML = nomeHeroi;
-                                li.appendChild(img)  
-                                container.appendChild(li);  
+                                li.appendChild(img); 
+                                Personagem.appendChild(li);  
                                 debugger;      
                             }
                         }
