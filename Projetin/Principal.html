@@ -9,10 +9,13 @@
     <body>
         <input type="text" value="">
         <button id="botão">Buscar</button>
-        <ul></ul>
+        <div id="erro" class="erro">Nenhum Resultado Encontrado.</div>
+        
+        <ul class="Herois"></ul>
+
         <script type="text/javascript"charset= "utf-8">
             var container = document.querySelector ('ul'),
-            input = document.querySelector('input')
+            input = document.querySelector('input');
             const timeStamp = '1618243974';
             const apiKey = 'cd50d89c84a9a1f4b7f6c6bf6ec03977';
             const md5 = '226b4e02b51dbb95afdcd22f3df94612';
@@ -20,25 +23,33 @@
             ).then((resposta) =>{
                 return resposta.json();
             }).then((jsonParsed)=>{
-                elementos = jsonParsed.data.count;
-                debugger;
+                elementos = jsonParsed.data.count; 
+     
                 document.getElementById('botão').addEventListener('click', function(){
-                    debugger;
-                    for(i=0; i<elementos;i++){
-                        const nomeHeroi =  jsonParsed.data.results[i].name
-                        if(nomeHeroi == input.value){
-                            var img = document.createElement('img'),
-                            li = document.createElement('li');
-                            img.scr = jsonParsed.data.results[i].thumbnail.path+'.'+jsonParsed.data.results[i].thumbnail.extension
-                            li.innerHTML = nomeHeroi;
-                            
-                            container.appendChild(li);
-                           
+                    container.innerHTML = '';
+                    document.getElementById("erro").style.display = 'none';
+    
+                    let contador = 0;
+                    if (input.value != ''){
+                        for(i=0; i<elementos;i++){
+                            const nomeHeroi =  jsonParsed.data.results[i].name
+                            if(nomeHeroi.includes(input.value)){
+                                contador = 1;
+                                const img = document.createElement('img');
+                                const li = document.createElement('li');
+                                img.src = jsonParsed.data.results[i].thumbnail.path+'.'+jsonParsed.data.results[i].thumbnail.extension
+                                li.innerHTML = nomeHeroi;
+                                li.appendChild(img)  
+                                container.appendChild(li);  
+                                debugger;      
+                            }
+                        }
                     }
-                }
+                    if (contador == 0){
+                        document.getElementById("erro").style.display = 'block';
+                    }
                 });
             })
-            
         </script>
     </body>
 </html>

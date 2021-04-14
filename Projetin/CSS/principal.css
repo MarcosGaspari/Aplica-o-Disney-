@@ -1,0 +1,28 @@
+html{
+    background-color:#151420;
+}
+img {
+    width: 300px;
+    border-bottom-style: solid;
+}
+.Herois{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    color: white;
+}
+ 
+.personagem{
+    width: 300px;
+    margin: 20px;
+    border-style: solid;
+    text-align: center;
+}
+.erro{
+    width: 100%;
+    display: none;
+    color: rgb(255, 85, 76);
+    margin-top: 5px;
+    font-size: 11px;
+    font-family: Avenir-Roman,sans-serif;
+}
