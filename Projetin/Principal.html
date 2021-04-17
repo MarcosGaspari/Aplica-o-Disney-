@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/principal.css"/>
     </head>
     <body>
+        <button id="botãoSair">Sair</button>
         <div class="imagemm">
             <div class="Imagem">
                 <img src="IMG/disney-plus-logo-1.png">
@@ -19,6 +20,9 @@
             <div class="Personagem"></div>
         </div>
         <script type="text/javascript"charset= "utf-8">
+        debugger;
+        if(window.localStorage.key(0) != null) {
+            let usuario = window.localStorage.getItem('usuario');
             var Personagem = document.querySelector('.Personagem'),
             input = document.querySelector('input');
             const timeStamp = '1618243974';
@@ -55,6 +59,14 @@
                     }
                 });
             })
+            document.getElementById('botãoSair').addEventListener('click', function(){
+               
+            })
+            
+        } else {
+            alert("Precisa estar logado!!");
+            window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/LoginEmail.html');
+        }
         </script>
     </body>
 </html>

@@ -28,10 +28,10 @@
 
                 var input = document.querySelector('input'),
                 erro = document.querySelector('.erro'),
-                id = document.URL.split('=')[1],
+                Token = location.search.slice(1),
                 senha =document.querySelector('.senha'),
                 normal = document.querySelector('.normal');
-                
+                debugger
                 document.getElementById('botão').addEventListener('click', function(){
                     if (input.validity.valid == true){
                         let xhr = new XMLHttpRequest();
@@ -52,7 +52,7 @@
                                 }
                             }
                                 xhr.send(JSON.stringify({
-                                    email: 'eve.holt@reqres.in',
+                                    email: Token,
                                     password: input.value
                                 }));
                     }else{

@@ -45,7 +45,25 @@
                 debugger;
                 document.getElementById('botão').addEventListener('click', function() {
                     if (input.validity.valid == true){
-                        window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/cadastroSenha.html?'+input.value);
+                        let xhr = new XMLHttpRequest();
+                            xhr.open('POST', 'https://reqres.in/api/register',true);
+                            xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+                            xhr.onreadystatechange = function() {
+                                if (xhr.readyState == 4) {
+                                    if (xhr.status == 200){
+                                        window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/cadastroSenha.html?'+input.value); 
+                                    }
+                                    if(xhr.status == 400){
+                                        document.getElementById("certo").style.display = 'none';
+                                        document.getElementById("erro").style.display = 'block';
+                                        document.getElementById('start').focus();
+                                    }
+                                }
+                            }
+                                xhr.send(JSON.stringify({
+                                    email: input.value,
+                                    password: 'QualquerSenha'
+                                }));
                     }else{
                         document.getElementById("certo").style.display = 'none';
                         document.getElementById("erro").style.display = 'block';
