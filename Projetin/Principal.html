@@ -21,7 +21,6 @@
         </div>
 
         <script type="text/javascript"charset= "utf-8">
-        debugger;
         let b = window.localStorage.getItem(window.localStorage.key(0));
         if((window.localStorage.key(0) != null)&&(b != "null")) {
             var Personagem = document.querySelector('.Personagem'),
@@ -62,11 +61,11 @@
             document.getElementById('botãoSair').addEventListener('click', function(){
                 let id = window.localStorage.key(0);
                 window.localStorage.setItem(id, 'null');
-                window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/LoginEmail.html');
+                window.location.href = ('LoginEmail.html');
             })
         } else {
             alert("Precisa estar logado!!");
-            window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/LoginEmail.html');
+            window.location.href = ('LoginEmail.html');
         }
         </script>
     </body>

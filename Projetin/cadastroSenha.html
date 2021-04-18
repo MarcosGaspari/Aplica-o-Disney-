@@ -40,7 +40,7 @@
                             if (xhr.readyState == 4) {
                                 if (xhr.status == 200){
                                     window.localStorage.setItem(JSON.parse(xhr.response).id, JSON.parse(xhr.response).token);
-                                    window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/Principal.html');
+                                    window.location.href = ('Principal.html');
                                 }
                                 if(xhr.status == 400){
                                     document.getElementById("certo").style.display = 'none';
