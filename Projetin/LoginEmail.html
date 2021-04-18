@@ -19,21 +19,50 @@
             <br>
             <div id="certo" class="normal">Digite um e-mail válido neste formato: seunome@exemplo.com.</div>
             <div id="erro" class="erro">Endereço de e-mail inválido. Digite um e-mail válido neste formato: seunome@exemplo.com.</div>
+            <div id="erro2" class="erro">Endereço de e-mail não encontrado.Digite um e-mail válido neste formato: seunome@exemplo.com.</div>
             <br>
             <input id="botão" type="button" value = "continuar" >
             <p>Não tem Disney+? <a href="cadastroEmail.html">Assine</a></p>
         </div>   
+
         <script type="text/javascript"charset= "utf-8">
             var input = document.querySelector('input');
             document.getElementById('botão').addEventListener('click', function() {
-                    if (input.validity.valid == true){
-                        window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/LoginSenha.html');
+                document.getElementById("certo").style.display = 'block';
+                document.getElementById("erro").style.display = 'none';
+                document.getElementById("erro2").style.display = 'none';
+                if (input.validity.valid == true){
+                    if (window.localStorage.key(0) != null){
+                        let xhr = new XMLHttpRequest();
+                            xhr.open('POST', 'https://reqres.in/api/login',true);
+                            xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+                            xhr.onreadystatechange = function() {
+                                if (xhr.readyState == 4) {
+                                    if (xhr.status == 200){
+                                        window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/LoginSenha.html?'+input.value); 
+                                    }
+                                    if(xhr.status == 400){
+                                        document.getElementById("certo").style.display = 'none';
+                                        document.getElementById("erro").style.display = 'block';
+                                        document.getElementById('start').focus();
+                                    }
+                                }
+                            }
+                                xhr.send(JSON.stringify({
+                                    email: input.value,
+                                    password: 'QualquerSenha'
+                                }));
                     }else{
                         document.getElementById("certo").style.display = 'none';
-                        document.getElementById("erro").style.display = 'block';
+                        document.getElementById("erro2").style.display = 'block';
                         document.getElementById('start').focus();
-
                     }
+                }else{
+                    document.getElementById("certo").style.display = 'none';
+                    document.getElementById("erro").style.display = 'block';
+                    document.getElementById('start').focus();
+
+                }
             });
         </script>
     </body>

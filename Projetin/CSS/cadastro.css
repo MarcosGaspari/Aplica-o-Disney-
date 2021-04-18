@@ -96,7 +96,7 @@ input[type = "password"]{
 .erro{
     width: 100%;
     display: none;
-    color: rgb(255, 85, 76);
+    color: rgb(189, 17, 8);
     margin-top: 5px;
     font-size: 11px;
     font-family: Avenir-Roman,sans-serif;

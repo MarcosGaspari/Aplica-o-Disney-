@@ -25,10 +25,35 @@
             <input id="botão" type="button" value = "continuar">
         </div>
             <script type="text/javascript"charset= "utf-8">
-                var input = document.querySelector('input');
+                var input = document.querySelector('input'),
+                Token = location.search.slice(1);
+                senha =document.querySelector('.senha'),
+                normal = document.querySelector('.normal');
+
                 document.getElementById('botão').addEventListener('click', function(){
                     if (input.validity.valid == true){
-                        window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/Principal.html');
+                        let xhr = new XMLHttpRequest();
+                        xhr.open('POST', 'https://reqres.in/api/register',true);
+                        xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+                        xhr.onreadystatechange = function() {
+                            if (xhr.readyState == 4) {
+                                if (xhr.status == 200){
+                                    let chave = window.localStorage.key(0);
+                                    window.localStorage.removeItem(window.localStorage.key(0));
+                                    window.localStorage.setItem(chave, JSON.parse(xhr.response).token);
+                                    window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/Principal.html');
+                                }
+                                if(xhr.status == 400){
+                                    document.getElementById("certo").style.display = 'none';
+                                    document.getElementById("erro").style.display = 'block';
+                                    document.getElementById('senha').focus();
+                                }
+                            }
+                        }
+                            xhr.send(JSON.stringify({
+                                email: Token,
+                                password: input.value
+                            }));
                     }else{
                         document.getElementById("certo").style.display = 'none';
                         document.getElementById("erro").style.display = 'block';

@@ -7,22 +7,23 @@
         <link rel="stylesheet" href="css/principal.css"/>
     </head>
     <body>
-        <button id="botãoSair">Sair</button>
         <div class="imagemm">
             <div class="Imagem">
                 <img src="IMG/disney-plus-logo-1.png">
             </div>
         </div>
         <input type="text" value="" placeholder="Pesquise por personagem" >
-        <button id="botão">Buscar</button>
+        <input id="botão" type="button" value = "Buscar" >
+        <button id="botãoSair">Sair</button>
         <div id="erro" class="erro">Nenhum Resultado Encontrado.</div>
         <div class="Geral">
             <div class="Personagem"></div>
         </div>
+
         <script type="text/javascript"charset= "utf-8">
         debugger;
-        if(window.localStorage.key(0) != null) {
-            let usuario = window.localStorage.getItem('usuario');
+        let b = window.localStorage.getItem(window.localStorage.key(0));
+        if((window.localStorage.key(0) != null)&&(b != "null")) {
             var Personagem = document.querySelector('.Personagem'),
             input = document.querySelector('input');
             const timeStamp = '1618243974';
@@ -49,8 +50,7 @@
                                 img.src = jsonParsed.data.results[i].thumbnail.path+'.'+jsonParsed.data.results[i].thumbnail.extension
                                 li.innerHTML = nomeHeroi;
                                 li.appendChild(img); 
-                                Personagem.appendChild(li);  
-                                debugger;      
+                                Personagem.appendChild(li);   
                             }
                         }
                     }
@@ -60,9 +60,10 @@
                 });
             })
             document.getElementById('botãoSair').addEventListener('click', function(){
-               
+                let id = window.localStorage.key(0);
+                window.localStorage.setItem(id, 'null');
+                window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/LoginEmail.html');
             })
-            
         } else {
             alert("Precisa estar logado!!");
             window.location.href = ('//C:/Users/Marco/OneDrive/%C3%81rea%20de%20Trabalho/C%23/Projetin/LoginEmail.html');
