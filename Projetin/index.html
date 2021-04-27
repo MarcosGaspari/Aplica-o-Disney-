@@ -9,10 +9,45 @@
     <body >
         <header >
             <div class="box2">
-                <a class="btn2" href="LoginEmail.html">Entrar</a>
+                <a id="Entrar" class="btn2">Entrar</a>
             </div>
         </header>
-
+        <div id="Login" class="login">
+            <div class="login.ativo">
+                <div class="inicio">
+                    <button id="X" >X</button>
+                    <h3 style="text-align: center;">LOGIN</h3>
+                    <br>
+                    <br>
+                    <input id="start" type="email" name = "E-mail"  maxlength="50" minlength="5" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required 
+                    placeholder="E-mail">
+                    <br>
+                    <div id="erro1" class="erro1">Endereço de e-mail inválido.</div>
+                    <br>
+                    <input id="senha" type="password" name = "password"  maxlength="50" minlength="4" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}" required 
+                    placeholder=" Senha">
+                    <br>
+                    <div id="erro2" class="erro2">Senha inválida.</div>
+                    <br>
+                    
+                    <input id="botão" type="button" value = "entrar">
+                </div> 
+            </div>
+        </div>
+        <div id="Marvel" class="Marvel">
+            <div class="imagemm">
+                <div class="Imagem">
+                    <img src="IMG/disney-plus-logo-1.png">
+                </div>
+            </div>
+            <input id="texto" type="text" value="" placeholder="Pesquise por personagem" >
+            <input id="buscar" type="button" value = "Buscar" >
+            <button id="botãoSair">Sair</button>
+            <div id="erro" class="erro">Nenhum Resultado Encontrado.</div>
+            <div class="Geral">
+                <div class="Personagem"></div>
+            </div>
+        </div>
         <div class="main">
             <div class="lateral3">
                 <img src="img/disney-plus-logo-1.png">
@@ -43,5 +78,6 @@
         </div>
         <footer><img src="img/disney-logos.png" ></footer>
         
+        <script src="JS/Principal.js" ></script>
     </body>
 </html>
