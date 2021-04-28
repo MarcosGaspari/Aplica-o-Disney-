@@ -1,5 +1,6 @@
 html{
     background-image: url("../IMG/Principal.jpg");
+    background-color: rgb(14, 14, 37);
     background-repeat: no-repeat;
 }
 header {
@@ -24,8 +25,8 @@ main {
     margin: 15px;
 }
 .lateral3 img{
-    max-width: 45%;
-    max-height: 90px;
+    width: 12%;
+    height: 85px;
     margin-left: 20px;
 }
 .lateral4 {
@@ -49,7 +50,6 @@ footer img{
     margin: 10px;
     flex-flow: column;
 }
-
 .box2{
     width: 130px;
     height: 70px;
@@ -145,6 +145,7 @@ input {
     border: transparent;
     border-radius: 5px;
     font-size: inherit;
+    margin-left: 20px;
 }
 input[type="button" ] {
     background-color:royalblue;
@@ -181,12 +182,13 @@ button[id= "X"]{
     font-size: 25px;
     position: absolute;
     left: 90%;
+    cursor:pointer;
 }
 .Marvel{
     display: none;
     background-color:rgb(14, 14, 37);
-    width: 1358px;
-    height: 848px;
+    width: 1366px;
+    height: 657px;
 }
 .imagemm{
     width: 90%;
@@ -199,7 +201,7 @@ button[id= "X"]{
 input [id= "texto"]{
     background-color: rgb(75, 78, 90);
     color: rgb(249, 249, 249);
-    font-family: Avenir-Heavy;
+    font-family:  Avenir-Roman,sans-serif;
     font-size: 24px;
     width: 40%;
     height: 45px;
@@ -209,7 +211,7 @@ input [id= "texto"]{
 }
 input[id="buscar" ]{
     color: white;
-    font-size: 24px;
+    font-size: 14px;
     background-color:royalblue;
     width: 10%;
     height: 46px;
@@ -217,6 +219,7 @@ input[id="buscar" ]{
     border-radius: 0px 5px 5px 0px;
     padding:0%;
     margin-left: -4px;
+    font-family: Avenir-Roman,sans-serif;
 }
 button[id= "botãoSair"]{
     color: white;
@@ -228,17 +231,12 @@ button[id= "botãoSair"]{
     margin-right: 30px;
     text-decoration: none;
     text-transform: uppercase;
-    position: absolute;
-    left: 54%;
+    margin-left: 10px;
+    font-family: Avenir-Roman,sans-serif;
 }
 button[id= "botãoSair"]:hover{
     background-color: white;
     color: black;
-}
-img {
-    width: 300px;
-    height: 300px;
-    margin: 15px;
 }
 .Geral{
     width: 25px;
@@ -253,13 +251,18 @@ img {
     margin: 10px;
 }
 .erro{
-    width: 100%;
+    width: 95%;
     display: none;
     color: rgb(255, 85, 76);
     margin-top: 10px;
     margin-left: 20px;
     font-size: 24px;
     font-family: Avenir-Heavy;
+}
+img {
+    width: 300px;
+    height: 300px;
+    margin: 15px;
 }
 @media screen and (max-width: 1218px){ 
     .box1 {min-height: 150px;}
@@ -279,7 +282,6 @@ img {
     }
 
 }
-
 @media screen and (max-width: 768px){
     html {  background-image: url(../IMG/WEB768.jpg);
             background-repeat: no-repeat;
@@ -329,7 +331,6 @@ img {
             text-align: center;
         }
     footer {display: none;}
-
     .lateral4 { height: 50px; 
                 max-width: 100%;
                 margin: 0px;
@@ -349,13 +350,11 @@ img {
             background-repeat: no-repeat;
         }
     header {height: 120px; }
-  
     .btn2 { padding: 0px;
             border: none;
             background-color: transparent;
         }
     .box2 {width: 60px;}
-
     .lateral3 { max-width: 100%;
                 max-height: 100px;
                 text-align: center;
@@ -395,7 +394,6 @@ img {
             margin: 10px;
         }
     footer {display: none;}
-
     .lateral4 { height: 50px;
                 max-width: 100%;
                 margin: 0px;
