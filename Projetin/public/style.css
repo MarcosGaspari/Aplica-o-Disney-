@@ -1,0 +1,412 @@
+html{
+    background-image: url("../IMG/Principal.jpg");
+    background-repeat: no-repeat;
+}
+header {
+    display: flex;
+    width: 100%;
+    height: 65px;
+    justify-content: flex-end;
+}
+main {
+    width: 100%;
+    height: 570px;
+}
+.texto {
+    width: 30%;
+    height: 100px;
+    margin-left: 20px;
+}
+.lateral1{
+    display: flex;
+    width: 48%;
+    height: 160px;
+    margin: 15px;
+}
+.lateral3 img{
+    max-width: 45%;
+    max-height: 90px;
+    margin-left: 20px;
+}
+.lateral4 {
+    max-width: 45%;
+    max-height: 50px;
+    margin-top: 65px;
+    margin-left: 15px;
+}
+footer img{
+    width: 40%;
+    height: 25px;
+    margin: 35px;
+}
+.box1  {
+    width: 50%;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    flex-grow: 1;
+    margin: 10px;
+    flex-flow: column;
+}
+
+.box2{
+    width: 130px;
+    height: 70px;
+    margin: 25px;
+}
+h1{
+    color: white;
+    font-family: Avenir Roman,sans-serif;
+    line-height: 40px;
+    font-size: 35px;
+}
+h2{
+    color: white;
+    font-size: 29px;
+    font-family: Avenir Roman,sans-serif;
+    text-align: center;
+    
+}
+h4{
+    color: white;
+    font-size: 10px;
+    font-family: Avenir Roman,sans-serif;
+    line-height: 5px; 
+}
+h3{
+    color: white;
+    font-size: 29px;
+    font-family: Avenir Roman,sans-serif;
+    line-height: 5px;
+}
+
+.btn2, a{
+    color: white;
+    font-family: Avenir Roman,sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+sub{
+    color: white;
+}
+h3, sub {
+    display: inline-block;
+}
+
+.btn1{
+    background-color: #0063e5;
+    color: white;
+    width: 100%;
+    height: 60px;
+    border: 1px #0063e5 solid;
+    border-radius: 5px;
+}
+.btn2 {
+    color: white;
+    background-color: rgb(34, 33, 33);
+    border: 1px white solid;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px 18px;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+body {margin: 0;}
+
+body .btn1:hover{
+    background-color: royalblue;
+}
+
+body .btn2:hover{
+    background-color: white;
+    color: black;
+}
+.login{
+	visibility: hidden;
+	position: absolute;
+    left:31%;
+	width:500px;
+	height:400px;
+    background-color:rgb(14, 14, 37);
+    border-radius: 10px;
+}
+.inicio{
+    width: 100%;
+    text-align: center;
+}
+input {
+    background-color:rgb(59, 59, 59);
+    color: white;
+    width: 50%;
+    height: 48px;
+    border: transparent;
+    border-radius: 5px;
+    font-size: inherit;
+}
+input[type="button" ] {
+    background-color:royalblue;
+    width: 50%;
+    height: 48px;
+    border: transparent;
+    border-radius: 5px;
+    padding:0%;
+    color: white;
+    font-family: Avenir Roman,sans-serif;
+    font-size: 15px;
+    text-transform: uppercase
+  }
+.erro1{
+    width: 100%;
+    display: none;
+    color: rgb(255, 85, 76);
+    margin-top: 5px;
+    font-size: 11px;
+    font-family: Avenir-Roman,sans-serif;
+}
+.erro2{
+    width: 100%;
+    display: none;
+    color: rgb(255, 85, 76);
+    margin-top: 5px;
+    font-size: 11px;
+    font-family: Avenir-Roman,sans-serif;
+}
+button[id= "X"]{
+    background-color:rgb(14, 14, 37);
+    color: white;
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    left: 90%;
+}
+.Marvel{
+    display: none;
+    background-color:rgb(14, 14, 37);
+    width: 1358px;
+    height: 848px;
+}
+.imagemm{
+    width: 90%;
+    height: 110px;
+}
+.Imagem img{
+    width: 12%;
+    height: 85px;
+}
+input [id= "texto"]{
+    background-color: rgb(75, 78, 90);
+    color: rgb(249, 249, 249);
+    font-family: Avenir-Heavy;
+    font-size: 24px;
+    width: 40%;
+    height: 45px;
+    border-radius: 5px 0px 0px 5px;
+    border: transparent;
+    margin-left: 20px;
+}
+input[id="buscar" ]{
+    color: white;
+    font-size: 24px;
+    background-color:royalblue;
+    width: 10%;
+    height: 46px;
+    border: transparent;
+    border-radius: 0px 5px 5px 0px;
+    padding:0%;
+    margin-left: -4px;
+}
+button[id= "botãoSair"]{
+    color: white;
+    background-color: rgb(34, 33, 33);
+    border: 1px white solid;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 15px 25px;
+    margin-right: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    left: 54%;
+}
+button[id= "botãoSair"]:hover{
+    background-color: white;
+    color: black;
+}
+img {
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+}
+.Geral{
+    width: 25px;
+    display:flex;
+    flex-flow:column;
+    flex-flow: row nowrap;
+    margin: 20px;
+}
+.Personagem{
+    color: white;
+    display: flex;
+    margin: 10px;
+}
+.erro{
+    width: 100%;
+    display: none;
+    color: rgb(255, 85, 76);
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 24px;
+    font-family: Avenir-Heavy;
+}
+@media screen and (max-width: 1218px){ 
+    .box1 {min-height: 150px;}
+
+    h3{font-size: 26px; line-height: 3px;}
+
+    .texto{ height: 90px;}
+    
+    h1 {font-size: 30px; }
+
+    .lateral1 {width: 50%;}
+
+    .box1 {min-height: 230px;}
+
+    h4 {margin-top: 110px;
+        line-height: 10px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    html {  background-image: url(../IMG/WEB768.jpg);
+            background-repeat: no-repeat;
+         }
+    header {height: 120px; }
+
+    .btn2 { padding: 0px; 
+            border: none;
+            background-color: transparent;
+        }
+
+    .box2 {width: 60px;}
+
+    .lateral3 { max-width: 100%;
+                max-height: 100px; 
+                text-align: center; 
+                margin-left: 0px;
+                margin-top: 150px;
+            }
+    .texto { height: 43px; 
+             width: 100%;
+             margin-left: 0px;
+            }
+    h1{ font-size: 23px;
+        text-align: center;
+        line-height: 20px;
+        margin: 0px;
+        }
+    .lateral1 { flex-direction: column;
+                margin: 0px;
+                width: 100%;
+                height: 260px;
+            }
+    .box1 { min-height: 50px;
+            width: 100%;
+            margin: 0px;
+            justify-content:initial;
+            text-align: center;
+            align-items: center;
+            background-color: rgb(1, 1, 24);
+        }
+    .btn1 { height: 45px;
+            width: 50%;
+        }
+    h3 {    font-size: 25px;
+            margin: 10px;
+            text-align: center;
+        }
+    footer {display: none;}
+
+    .lateral4 { height: 50px; 
+                max-width: 100%;
+                margin: 0px;
+                padding: 20px;
+                background-color: rgb(1, 1, 24);
+            }
+    h4 {    line-height: 10px;
+            text-align: center;
+            color: lightgrey;
+            font-size: 9px;
+            margin: 0px;
+            background-color: rgb(1, 1, 24);
+        }
+}
+@media screen and (max-width: 425px){
+    html{  background-image: url(../IMG/WEB425.jpg);
+            background-repeat: no-repeat;
+        }
+    header {height: 120px; }
+  
+    .btn2 { padding: 0px;
+            border: none;
+            background-color: transparent;
+        }
+    .box2 {width: 60px;}
+
+    .lateral3 { max-width: 100%;
+                max-height: 100px;
+                text-align: center;
+                margin-left: 0px;
+                margin-top: 20px;
+            }
+    .texto {    height: 35px;
+                width: 100%;
+                margin-left: 0px;
+                background-color: rgb(1, 1, 24);
+            }
+    h1{ font-size: 19px;
+        text-align: center;
+        line-height: 20px;
+        margin: 0px;
+        background-color: rgb(1, 1, 24);
+    }
+    .lateral1 { flex-direction: column;
+                margin: 0px;
+                width: 100%;
+                height: 260px;
+            }
+    .box1 { min-height: 50px;
+            width: 100%;
+            text-align: center;
+            margin: 0px;
+            justify-content:initial;
+            align-items: center;
+            background-color: rgb(1, 1, 24);
+        }
+    .btn1 { height: 35px;
+            width: 50%;
+            text-align: center;
+            align-items: center;
+        }
+    h3 {    font-size: 25px;
+            margin: 10px;
+        }
+    footer {display: none;}
+
+    .lateral4 { height: 50px;
+                max-width: 100%;
+                margin: 0px;
+                padding: 20px;
+                background-color: rgb(1, 1, 24);
+            }
+    h4 {    line-height: 10px;
+            text-align: center;
+            color: lightgrey;
+            font-size: 9px;
+            margin: 0px;
+            background-color: rgb(1, 1, 24);  
+        }
+}
