@@ -1,0 +1,87 @@
+  
+html{
+    background-color:rgb(14, 14, 37)
+}
+.imagemm{
+    width: 25%;
+    height: 110px;
+}
+.Imagem img{
+    width: 12%;
+    height: 85px;
+    position: absolute;
+    left: 42%;
+    top: 5%;
+}
+.inicio{
+    width: 28%;
+    position: absolute;
+    left: 35%;
+    margin-top: 40px;
+}
+h3 {
+    color:rgb(249, 249, 249);
+    font-family: Avenir-Heavy, sans-serif;
+    font-size: 24px;
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+}
+input{
+    background-color:rgb(59, 59, 59);
+    color: white;
+    width: 99%;
+    height: 48px;
+    border: transparent;
+    border-radius: 5px;
+    font-size: inherit;
+}
+input[id="button" ] {
+    background-color:royalblue;
+    width: 100%;
+    height: 48px;
+    border: transparent;
+    border-radius: 5px;
+    padding:0%;
+  }
+input[value="continuar"]{
+    color: white;
+    font-family: Avenir Roman,sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0%;
+}
+
+p{
+    color: rgb(202, 202, 202);;
+    font-family: Avenir Roman,sans-serif;
+    font-size: 15px; 
+    
+}
+a{
+    color: white;
+    font-family: Avenir Roman,sans-serif;
+    font-size: 15px; 
+    text-decoration: none;
+}
+.erro{
+    width: 100%;
+    display: none;
+    color: rgb(255, 85, 76);
+    margin-top: 5px;
+    font-size: 11px;
+    font-family: Avenir-Roman,sans-serif;
+}
+.normal
+{
+    width: 100%;
+    display: block;
+    color:white;
+    margin-top: 5px; 
+    font-size: 11px;
+    font-family: Avenir-Roman,sans-serif;
+}
+li{
+    color: aliceblue;
+}
