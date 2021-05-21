@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html style="background-image: none">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Disney+ </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="Marvel" class="Marvel">
+            <div class="imagemm">
+                <div class="Imagem">
+                    <img src="IMG/disney-plus-logo-1.png">
+                </div>
+            </div>
+            <input id="texto" type="text" value="" placeholder="Pesquise por personagem" >
+            <input id="buscar" type="button" value = "Buscar" >
+            <button id="botãoSair">Sair</button>
+            <div id="erro" class="erro">Nenhum Resultado Encontrado.</div>
+            <div class="Geral">
+                <div class="Personagem"></div>
+            </div>
+        </div>
+    <script type="text/javascript"charset= "utf-8">
+        let xhr = new XMLHttpRequest();
+        let Personagem = document.querySelector('.Personagem');
+        const timeStamp = '1618243974';
+        const apiKey = 'cd50d89c84a9a1f4b7f6c6bf6ec03977';
+        const md5 = '226b4e02b51dbb95afdcd22f3df94612';
+        document.getElementById('buscar').addEventListener('click', function(){
+            ApiMarvel();
+        });
+    
+function ApiMarvel(){
+    input = document.getElementById("texto");
+    fetch (`https://gateway.marvel.com:443/v1/public/characters?ts=${timeStamp}&apikey=${apiKey}&hash=${md5}&limit=100`
+    ).then((resposta) =>{
+        return resposta.json();
+    }).then((jsonParsed)=>{
+        elementos = jsonParsed.data.count; 
+        document.getElementById('texto').addEventListener('click', function(){
+            Personagem.innerHTML = ''; 
+            document.getElementById("erro").style.display = 'none';
+
+            let contador = 0;
+            if (input.value != ''){
+                for(i=0; i<elementos;i++){
+                    const nomeHeroi =  jsonParsed.data.results[i].name
+                    if(nomeHeroi.includes(input.value)){
+                        contador = 1;
+                        const img = document.createElement('img');
+                        const li = document.createElement('li');
+                        img.src = jsonParsed.data.results[i].thumbnail.path+'.'+jsonParsed.data.results[i].thumbnail.extension
+                        li.innerHTML = nomeHeroi;
+                        li.appendChild(img); 
+                        Personagem.appendChild(li);   
+                    }
+                }
+            }
+            if (contador == 0){
+                document.getElementById("erro").style.display = 'block';
+            }
+        });
+    });
+    </script>
+    </body>
+</html>
