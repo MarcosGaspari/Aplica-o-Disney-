@@ -1,6 +1,7 @@
 html{
     background-image: url("../IMG/Principal.jpg");
     background-repeat: no-repeat;
+    background-color:rgb(14, 14, 37);
 }
 header {
     display: flex;
@@ -124,15 +125,6 @@ body .btn2:hover{
     background-color: white;
     color: black;
 }
-.login{
-	visibility: hidden;
-	position: absolute;
-    left:31%;
-	width:500px;
-	height:400px;
-    background-color:rgb(14, 14, 37);
-    border-radius: 10px;
-}
 .inicio{
     width: 100%;
     text-align: center;
@@ -158,36 +150,6 @@ input[type="button" ] {
     font-size: 15px;
     text-transform: uppercase
   }
-.erro1{
-    width: 100%;
-    display: none;
-    color: rgb(255, 85, 76);
-    margin-top: 5px;
-    font-size: 11px;
-    font-family: Avenir-Roman,sans-serif;
-}
-.erro2{
-    width: 100%;
-    display: none;
-    color: rgb(255, 85, 76);
-    margin-top: 5px;
-    font-size: 11px;
-    font-family: Avenir-Roman,sans-serif;
-}
-button[id= "X"]{
-    background-color:rgb(14, 14, 37);
-    color: white;
-    border: none;
-    font-size: 25px;
-    position: absolute;
-    left: 90%;
-}
-.Marvel{
-    display: none;
-    background-color:rgb(14, 14, 37);
-    width: 1358px;
-    height: 848px;
-}
 .imagemm{
     width: 90%;
     height: 110px;
@@ -229,7 +191,7 @@ button[id= "botãoSair"]{
     text-decoration: none;
     text-transform: uppercase;
     position: absolute;
-    left: 54%;
+    left: 65%;
 }
 button[id= "botãoSair"]:hover{
     background-color: white;

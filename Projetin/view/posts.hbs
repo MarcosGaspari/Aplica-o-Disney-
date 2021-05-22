@@ -27,11 +27,13 @@
                 <div id="certo" class="normal">Use no mínimo quatro caracteres e no máximo dez, com pelo menos um número, uma letra maiúscula e uma letra minúscula.</div>
                 <br>
                 <input id="button" type="submit" value="continuar">
+                <br>
+                <p>Não tem Disney?<a href="cadastro">ASSINE</a></p>
             </form>
         </div>
         <ul>
             {{#posts}}
-                <li>{{Usuario}}</li>
+                <li>{{Usuario}}{{senha}}</li>
             {{/posts}}
         </ul>
     </body>
