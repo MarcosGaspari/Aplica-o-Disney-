@@ -15,14 +15,15 @@
         <div class="inicio1">
             <h3 style="text-align: center;">CADASTRO</h3>
             <form action="cadastro" method="post" accept-charset="utf-8">
-                <input type="text" name="adicionar" value=""maxlength="50" minlength="5" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required 
+                <input type="email" name="adicionar" value=""maxlength="50" minlength="5" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required 
                 placeholder=" E-mail">    
                 <br>
                 <div id="certo" class="normal">Digite um e-mail válido neste formato: seunome@exemplo.com.</div>
                 <br>
                 <input type="password" name="password" value="" maxlength="10" minlength="4" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}"required placeholder=" Senha">
-                <input type="checkbox" name="checkbox" > <p style="display: inline; font-size: 12px;">Sim! Quero receber notícias, ofertas especiais e outras informações do Disney+ e das empresas do grupo Walt Disney.</p>
+                 <div id="certo" class="normal">Use no mínimo quatro caracteres e no máximo dez, com pelo menos um número, uma letra maiúscula e uma letra minúscula.</div>
                 <br>
+                <input type="checkbox" name="checkbox" > <p style="display: inline; font-size: 12px;">Quero receber notícias, ofertas especiais e informações do Disney+ e das empresas do grupo Walt Disney.</p>
                 <div class="fundo">
                     <p style="font-size: 12px;">A Disney usará os seus dados para oferecer e dar suporte aos serviços, 
                         personalizar e melhorar a sua experiência no Disney+ e para enviar informações.
